@@ -1,7 +1,7 @@
 # Janhvi: The Gift Gallery | Smart Redirector
-Welcome to the permanent "Signpost" for Janhvi: The Gift Gallery.
+### Welcome to the permanent "Signpost" for Janhvi: The Gift Gallery.
 
-📖 The Backstory
+## The Backstory
 This repository serves as a Permanent Redirect Bridge. I launched my store on a .studio domain using the GitHub Student Developer Pack. However, since free domains eventually expire, I built this redirector to future-proof my physical branding.
 
 The Problem: Printing QR codes that point directly to a temporary domain (.studio) is risky. If the domain changes, the printed codes become useless.
