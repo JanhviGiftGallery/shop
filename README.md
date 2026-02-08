@@ -42,4 +42,4 @@ Avoid paid third-party QR services that insert their own branding.
 
 Use a dedicated GitHub account and Pages. It provides a branded URL (yourbrand.github.io) and total control over your traffic for $0 forever.
 
-Maintained by @CyberPolymath. Built for scalability.
+### Maintained by @CyberPolymath. Built for scalability.
