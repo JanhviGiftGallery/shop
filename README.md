@@ -1,41 +1,43 @@
-Janhvi: The Gift Gallery | Smart Redirector
-hi
-Welcome to the official "Signpost" repository for Janhvi: The Gift Gallery.
+# Janhvi: The Gift Gallery | Smart Redirector
+Welcome to the permanent "Signpost" for Janhvi: The Gift Gallery.
 
-📖 The Backstory (Why this exists)
-This repository serves as a Permanent Redirect Bridge. As a developer using the GitHub Student Developer Pack, I launched my store on a .studio domain. However, knowing that free domains eventually expire or change, I built this "Smart Redirector" to future-proof my physical branding.
+📖 The Backstory
+This repository serves as a Permanent Redirect Bridge. I launched my store on a .studio domain using the GitHub Student Developer Pack. However, since free domains eventually expire, I built this redirector to future-proof my physical branding.
 
-The Problem: Printing QR codes that point directly to a temporary domain (.studio) is risky. If the domain changes, the printed codes become garbage. The Solution: This repository! All my printed QR codes point to this GitHub Pages URL. It acts as a permanent middleman that I can update in seconds without ever re-printing a single sticker or business card.
+The Problem: Printing QR codes that point directly to a temporary domain (.studio) is risky. If the domain changes, the printed codes become useless.
 
-Live Deployment
+The Solution: All my printed QR codes point to this GitHub Pages URL. It acts as a permanent "middleman" that I can update in seconds without ever re-printing a single sticker or business card.
+
+🚀 Live Deployment Details
 Permanent QR Link: https://janhvigiftgallery.github.io/shop/
 
-Current Destination: https://www.janhvi.studio (Hosted on Vercel)
+Current Destination: www.janhvi.studio
 
-Main Development Profile: @CyberPolymath — Where the actual E-commerce engine lives.
+Hosting & SSL: Powered by Vercel
 
-How it Works
+Primary Development Account: @CyberPolymath
+
+🛠️ Technical Implementation
 This is a high-efficiency, zero-cost implementation of a Dynamic Redirect:
 
-Scanner hits the GitHub Pages URL.
+Scanner hits this GitHub Pages URL.
 
-index.html executes a meta-refresh and a JavaScript window location change.
+index.html executes a meta-refresh and a JavaScript redirect.
 
 User is seamlessly bounced to the latest live version of the shop.
 
-Project Timeline
-Feb 8, 2026: Initial deployment of janhvi.studio.
+📅 Milestone: February 8, 2026
+Today marks the successful live deployment of the e-commerce site.
 
-Status: Under Active Development (But yes, you can actually buy things!)
+Status: Under Active Development 🚧
 
-For Developers Reading This
-If you're "broke" but want professional-grade redirection for your startup:
+Note: The shop is functional! You can actually browse and buy products at the link above.
 
-Don't use paid third-party QR services that steal your branding.
+💡 Strategy for Student Developers
+If you are working with a limited budget but want professional-grade redirection:
 
-Do use a dedicated GitHub account and Pages. It gives you a branded URL (yourbrand.github.io) and total control over your traffic for $0.
+Avoid paid third-party QR services that insert their own branding.
 
-Connect with the Founder
-The full e-commerce site (Frontend/Backend) is managed on my main account. Check out the technical architecture there: 👉 Visit CyberPolymath on GitHub
+Use a dedicated GitHub account and Pages. It provides a branded URL (yourbrand.github.io) and total control over your traffic for $0 forever.
 
-Created with ❤️ by a Student Developer looking to scale smart.
+Maintained by @CyberPolymath. Built for scalability.
