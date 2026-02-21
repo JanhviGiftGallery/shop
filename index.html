@@ -50,30 +50,15 @@
 <body>
     <div class="container">
         <h1>Janhvi: The Gift Gallery</h1>
-        <p>Handcrafted with love. ✨</p>
+        <p>Handcrafted with love. ?</p>
         
-        <a href="https://shop-page-flame.vercel.app/" class="button web-btn">🛍️ Shop Our Collection</a>
+        <a href="https://shop-page-flame.vercel.app/" class="button web-btn">??? Shop Our Collection</a>
         
-        <a href="instagram://user?username=thegiftshopp._" class="button insta-btn" onclick="openInstagramLink(event)">📸 Follow on Instagram</a>
+        <a href="https://www.instagram.com/thegiftshopp._/" class="button insta-btn" target="_blank">?? Follow on Instagram</a>
         
-        <a href="https://wa.me/918447897800?text=Hi!%20I%20saw%20your%20collection%20and%20wanted%20to%20inquire%20about..." class="button wa-btn">💬 Chat on WhatsApp</a>
+        <a href="https://wa.me/918447897800?text=Hi!%20I%20saw%20your%20collection%20and%20wanted%20to%20inquire%20about..." class="button wa-btn">?? Chat on WhatsApp</a>
         
         <div class="footer">JOIN OUR CREATIVE JOURNEY</div>
     </div>
-
-    <script>
-        function openInstagramLink(event) {
-            event.preventDefault();
-            
-            const isAndroid = /Android/i.test(navigator.userAgent);
-            const instagramUsername = 'thegiftshopp._';
-            
-            if (isAndroid) {
-                // Direct app protocol without Intent wrapper
-                window.location.href = 'instagram://user?username=' + encodeURIComponent(instagramUsername);
-            } else {
-                // For iOS and desktop: use web URL
-                window.location.href = 'https://www.instagram.com/' + instagramUsername + '/';
-            }
-        }
-    </script>
+</body>
+</html>
