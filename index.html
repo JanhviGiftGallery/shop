@@ -54,7 +54,7 @@
         
         <a href="https://shop-page-flame.vercel.app/" class="button web-btn">🛍️ Shop Our Collection</a>
         
-        <a href="https://www.instagram.com/thegiftshopp._/" class="button insta-btn" onclick="openInstagram(event)">📸 Follow on Instagram</a>
+        <a href="instagram://user?username=thegiftshopp._" class="button insta-btn" onclick="openInstagramLink(event)">📸 Follow on Instagram</a>
         
         <a href="https://wa.me/918447897800?text=Hi!%20I%20saw%20your%20collection%20and%20wanted%20to%20inquire%20about..." class="button wa-btn">💬 Chat on WhatsApp</a>
         
@@ -62,36 +62,18 @@
     </div>
 
     <script>
-        function openInstagram(event) {
+        function openInstagramLink(event) {
             event.preventDefault();
             
             const isAndroid = /Android/i.test(navigator.userAgent);
-            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
             const instagramUsername = 'thegiftshopp._';
-            const instagramProfileURL = 'https://www.instagram.com/' + instagramUsername + '/';
             
             if (isAndroid) {
-                // For Android: Use Intent scheme to explicitly open with Instagram app
-                const intentURL = 'intent://instagram.com/' + instagramUsername + '/#Intent;scheme=https;package=com.instagram.android;end';
-                window.location.href = intentURL;
-                
-                // Fallback after 2 seconds in case app isn't installed
-                setTimeout(() => {
-                    window.location.href = instagramProfileURL;
-                }, 2000);
-            } else if (isIOS) {
-                // For iOS: Try the app scheme first, then fall back to web
-                const instagramAppURL = 'instagram://user?username=' + encodeURIComponent(instagramUsername);
-                
-                const timeout = setTimeout(() => {
-                    window.location.href = instagramProfileURL;
-                }, 1000);
-                
-                window.location.href = instagramAppURL;
-                window.addEventListener('pagehide', () => clearTimeout(timeout));
+                // Direct app protocol without Intent wrapper
+                window.location.href = 'instagram://user?username=' + encodeURIComponent(instagramUsername);
             } else {
-                // Desktop fallback
-                window.location.href = instagramProfileURL;
+                // For iOS and desktop: use web URL
+                window.location.href = 'https://www.instagram.com/' + instagramUsername + '/';
             }
         }
     </script>
