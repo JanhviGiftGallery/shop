@@ -68,23 +68,30 @@
             const isAndroid = /Android/i.test(navigator.userAgent);
             const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
             const instagramUsername = 'thegiftshopp._';
+            const instagramProfileURL = 'https://www.instagram.com/' + instagramUsername + '/';
             
             if (isAndroid) {
-                // For Android: Use the web URL - Android OS will detect Instagram app and open it with the profile directly
-                window.location.href = 'https://www.instagram.com/' + instagramUsername + '/';
+                // For Android: Use Intent scheme to explicitly open with Instagram app
+                const intentURL = 'intent://instagram.com/' + instagramUsername + '/#Intent;scheme=https;package=com.instagram.android;end';
+                window.location.href = intentURL;
+                
+                // Fallback after 2 seconds in case app isn't installed
+                setTimeout(() => {
+                    window.location.href = instagramProfileURL;
+                }, 2000);
             } else if (isIOS) {
                 // For iOS: Try the app scheme first, then fall back to web
                 const instagramAppURL = 'instagram://user?username=' + encodeURIComponent(instagramUsername);
                 
                 const timeout = setTimeout(() => {
-                    window.location.href = 'https://www.instagram.com/' + instagramUsername + '/';
+                    window.location.href = instagramProfileURL;
                 }, 1000);
                 
                 window.location.href = instagramAppURL;
                 window.addEventListener('pagehide', () => clearTimeout(timeout));
             } else {
                 // Desktop fallback
-                window.location.href = 'https://www.instagram.com/' + instagramUsername + '/';
+                window.location.href = instagramProfileURL;
             }
         }
     </script>
